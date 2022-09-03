@@ -14,16 +14,16 @@ All descriptions starts on the base directory, I recommend to create two termina
 
 ```bash
 cd app
-python3 \manage.py makemigrations
-python3 \manage.py makemigrations api
-python3 \manage.py migrate
-python3 \manage.py runserver
+python3 .\manage.py makemigrations
+python3 .\manage.py makemigrations api
+python3 .\manage.py migrate
+python3 .\manage.py runserver
 ```
 
 ## Start react to development
 
 ```bash
-cd app/frontend/
+cd frontend/
 npm install
-npm run dev
+npm start
 ```
