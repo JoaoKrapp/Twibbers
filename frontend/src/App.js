@@ -15,8 +15,6 @@ import { AuthProvider } from "./context/AuthContext";
 import InternalRoute from "./utils/InternalRoute";
 import ExternalRoute from "./utils/ExternalRoute";
 
-import Header from "./pages/Header";
-import Content from "./pages/Content";
 import Feed from "./pages/Feed";
 import Homepage from "./pages/Homepage";
 import Login from "./pages/Login";
@@ -28,7 +26,6 @@ function App() {
   return (
     <Router>
       <AuthProvider>
-		<Header></Header>
         <Routes>
 
 			{/* Only for logged users */}

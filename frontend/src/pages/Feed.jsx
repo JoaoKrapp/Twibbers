@@ -5,7 +5,7 @@ import { useNavigate  } from 'react-router-dom';
 
 // Developer components
 
-import Header from "./Header";
+import Header from "../components/Header";
 
 function Feed() {
 	let {user, authToken} = useContext(AuthContext);
