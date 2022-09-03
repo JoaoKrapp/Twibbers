@@ -1,7 +1,7 @@
 import React, { Component, useContext, useEffect, useState } from "react";
-import '../style/Feed.css'
-import AuthContext from "./context/AuthContext";
+import AuthContext from "../context/AuthContext";
 import axios from 'axios';
+import { useNavigate  } from 'react-router-dom';
 
 // Developer components
 
@@ -11,6 +11,8 @@ function Feed() {
 	let {user, authToken} = useContext(AuthContext);
 
     const [avatar, setAvatar] = useState({});
+
+    const history = useNavigate();
 
     const changeAvatar = (e) => {
         setAvatar({

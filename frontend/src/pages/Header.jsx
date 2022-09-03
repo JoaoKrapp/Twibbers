@@ -1,7 +1,7 @@
 import React, { Component, useContext } from "react";
 import { Link } from 'react-router-dom';
 
-import AuthContext from "./context/AuthContext";
+import AuthContext from "../context/AuthContext";
 
 const Header = () => {
 
@@ -15,7 +15,7 @@ const Header = () => {
 
 		links = (
 			<ul>
-				<li><Link to="/home">Home</Link></li>
+				<li><Link style={{"textDecoration" : "none", "color" : "black"}} to="/home">Home</Link></li>
 				<li><Link to="/login">Login</Link></li>
 				<li><Link to="/signup">Signup</Link></li>
 			</ul>
@@ -31,9 +31,12 @@ const Header = () => {
 	}
 
 	return (
-		<div>
-			{ links }
-		</div>
+		<aside>
+			<div id="links">
+				{ links }
+			</div>
+		</aside>
+		
 	)
 }
 

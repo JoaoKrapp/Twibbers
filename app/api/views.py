@@ -97,13 +97,15 @@ def sign_up(request):
 @permission_classes([IsAuthenticated])
 def upload_avatar(request):
 	
-	print(request.FILES['file'])
 	
 	avatar = request.FILES['file']
 	user = request.user
 
 	profile = Profile.objects.filter(user=user).first()
-	print(profile)
+
+	if not profile:
+		res = {"code": 200, "message": "Success, you are admin so it wont work!"}
+		return Response(data=json.dumps(res), status=200)
 	
 	profile.avatar = avatar
 	profile.save()

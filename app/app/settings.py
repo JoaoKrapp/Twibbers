@@ -48,7 +48,6 @@ INSTALLED_APPS = [
 
     # Developer created apps
     'api.apps.ApiConfig',
-    'frontend.apps.FrontendConfig',
 
     # Token library
     'rest_framework_simplejwt.token_blacklist',
@@ -185,4 +184,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8000",
     "http://127.0.0.1:8000",
+    "http://localhost:3000",
 ]
